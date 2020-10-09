@@ -1,28 +1,14 @@
 package capstone.foodscouter.image;
-
-import capstone.foodscouter.food.Food;
-import org.apache.tomcat.util.http.fileupload.FileUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import org.yaml.snakeyaml.reader.StreamReader;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
 import java.io.*;
 import java.net.InetSocketAddress;
 import java.net.Socket;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.SQLOutput;
 
-//file stream 으로 변경해야함
 @RestController
 public class ImageController {
     @PostMapping("/image")
